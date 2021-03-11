@@ -11,7 +11,7 @@ This is the repository for updates and some added changes to the ProStack direct
 opencv_2 -canny ksize sigma edgeThresh1 edgeThresh2 '..\opencv_2\lhbg.tif' '..\opencv_2\lhbg_out.tif'<br>
 1. ksize - edge dimension for Gaussian blur.
 2. sigma - parametr for Gaussian blur.
-3. edgeThresh1, edgeThresh2 - first and second threshold for the hysteresis procedure.
+3. edgeThresh1, edgeThresh2 - first and second threshold for the hysteresis procedure. <br>
 Example comand<br>
 cd 'opencv_2\x64\Debug'<br>
 opencv_2 -canny 3x3 1 0.03 0.1 '..\opencv_2\lhbg.tif' '..\opencv_2\lhbg_out.tif'<br>
