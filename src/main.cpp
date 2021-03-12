@@ -9,16 +9,6 @@
 using namespace cv;
 using namespace std;
 
-string file_name_parser(const string &str) {
-	string newStr;
-	char a = '\'';
-	for (size_t i = 0; i < str.size(); i++)
-		if (str[i] != a)
-			newStr.append(1, str[i]);
-	return newStr;
-}
-
-
 class Param_line 
 {
 public:
@@ -29,11 +19,11 @@ public:
 		double edgeThresh1;
 		double edgeThresh2;
 		if (argc == 0) return false;
-		k1 = (int)(argv[2][0]) - 48;
-		k2 = (int)(argv[2][2]) - 48;
-		sigma = stoi(argv[3]);
-		edgeThresh1 = stod(argv[4]);
-		edgeThresh2 = stod(argv[5]);
+		k1 = stoi(argv[2]);
+		k2 = stoi(argv[3]);
+		sigma = stoi(argv[4]);
+		edgeThresh1 = stod(argv[5]);
+		edgeThresh2 = stod(argv[6]);
 		this->k1 = k1;
 		this->k2 = k2;
 		this->sigma = sigma;
@@ -48,6 +38,14 @@ public:
 };
 
 
+string file_name_parser(const string &str) {
+	string newStr;
+	char a = '\'';
+	for (size_t i = 0; i < str.size(); i++)
+		if (str[i] != a)
+			newStr.append(1, str[i]);
+	return newStr;
+}
 
 
 Mat canny_work(Mat & image, Param_line & canny_params) {
@@ -74,7 +72,7 @@ int main(int argc, const char** argv)
 	filename = file_name_parser(file_name_params[0]);
 	out_name = file_name_parser(file_name_params[1]);
 	if (!canny_params.param_parser(argc, argv)) {
-		printf("Cannot read image file: %s\n", filename.c_str());
+		printf("Incorrect input parameters\n");
 		return -1;
 	}
 	bool res = imreadmulti(filename,mats);

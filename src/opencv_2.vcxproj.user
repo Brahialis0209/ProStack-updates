@@ -1,7 +1,7 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
-    <LocalDebuggerCommandArguments>-canny 3x3 1 0.03 0.1 'C:\Users\m9co\source\repos\opencv_2\lhbg.tif' 'C:\Users\m9co\source\repos\opencv_2\lhbg_out.tif'</LocalDebuggerCommandArguments>
+    <LocalDebuggerCommandArguments>-canny 3 3 1 0.03 0.1 'C:\Users\m9co\source\repos\opencv_2\lhbg.tif' 'C:\Users\m9co\source\repos\opencv_2\lhbg_out.tif'</LocalDebuggerCommandArguments>
     <DebuggerFlavor>WindowsLocalDebugger</DebuggerFlavor>
   </PropertyGroup>
 </Project>

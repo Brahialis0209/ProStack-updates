@@ -9,13 +9,13 @@ This is the repository for updates and some added changes to the ProStack direct
 (например из opencv\build\x64\vc15\lib) нужно закинуть в директорию ProStack.<br>
 Весь код преставлен в файле main.cpp<br>
 ### Параметры для этой программы: <br>
-opencv_2 -canny ksize sigma edgeThresh1 edgeThresh2 '..\opencv_2\lhbg.tif' '..\opencv_2\lhbg_out.tif'<br>
-1. ksize - edge dimension for Gaussian blur.
+opencv_2 -canny ksize1 ksize2  sigma edgeThresh1 edgeThresh2 '..\opencv_2\lhbg.tif' '..\opencv_2\lhbg_out.tif'<br>
+1. ksize1, ksize2 - edge dimension for Gaussian blur.
 2. sigma - parametr for Gaussian blur.
 3. edgeThresh1, edgeThresh2 - first and second threshold for the hysteresis procedure. <br>
 Example comand<br>
 cd 'opencv_2\x64\Debug'<br>
-opencv_2 -canny 3x3 1 0.03 0.1 '..\opencv_2\lhbg.tif' '..\opencv_2\lhbg_out.tif'<br>
+opencv_2 -canny 3 3 1 0.03 0.1 '..\opencv_2\lhbg.tif' '..\opencv_2\lhbg_out.tif'<br>
 
 
 ## in English(fixed in future)
