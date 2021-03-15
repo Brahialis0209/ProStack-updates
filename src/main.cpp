@@ -89,6 +89,6 @@ int main(int argc, const char** argv)
 		//k = waitKey(0);
 		canny_mats.push_back(result_mat);
 	}
-	imwritemulti(out_name, canny_mats);
+	imwrite(out_name, canny_mats);
 	return 0;
 }
