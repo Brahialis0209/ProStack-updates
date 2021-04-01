@@ -1,5 +1,5 @@
 INSERT OR REPLACE INTO Packages (Name, Version)  VALUES ('PCKUPD','1.0.0');
-INSERT OR REPLACE INTO Operators (name, implementor, executable, type, inputs, outputs, uidescription, message, metaname, metaweight, Segmentation, Detect_edges, Edges) VALUES ('new_canny','IM','pckupd', 1, 'tif', 'tif', '5;
+INSERT OR REPLACE INTO Operators (name, implementor, executable, type, inputs, outputs, uidescription, message, metaname, metaweight, Сегментация, Определение_границ, Границы) VALUES ('new_canny','IM','pckupd', 1, 'tif', 'tif', '5;
 Ksize1;int;3;
 Ksize2;int;3;
 Sigma;double;0.5;
