@@ -24,6 +24,10 @@ opencv_2 -canny 3 3 1 0.03 0.1 '..\opencv_2\lhbg.tif' '..\opencv_2\lhbg_out.tif'
 - sqlite3 "kimono-db.db.en_US.UTF-8"
 - cat opencv_2.sqlt3
 
+## Модифицированные сценарии после добавления AFid
+новые сценарии расположены в `modif_scripts/`
+
+
 ## in English(fixed in future)
 Problem: in the current version of the simpleton (link will be below)
 There are packages that are outdated and boundary detection methods such as Canny may not work (tested on Windows).<br>

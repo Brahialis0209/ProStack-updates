@@ -1,0 +1,73 @@
+# ProStack scenario
+
+[Workspace]
+n=1
+nodes=5
+
+[Node:0]
+info=0;144;367;30;50;0;0;0;0;0;0;0;0;0;
+id=--noise_del_cf 0.7 --kAuto 1 --k 20 --min_area 7 --corr 0.3 --trace_sensitivity 20
+type=PAM
+file=.any,.any
+name=afid
+version=7.0.8
+use_metaname=0
+server=default
+delay=6000
+vip=0
+label=afid
+
+[default]
+name=default
+host=localhost
+port=7778
+address=/
+proto=door
+login=
+password=
+
+[Connections]
+0.1=1.1
+0.2=3.1
+2.1=0.1
+4.1=0.2
+
+[Node:1]
+info=0;127;754;30;35;0;0;0;0;0;0;0;0;0;
+id=
+type=OUS
+file=file:///C:/vkr-temirgaliev/modif_aps/m1/kAuto/afid_out/res_afid_rem_C0.tif
+server=default
+delay=60
+vip=0
+label=в файл
+
+[Node:2]
+info=0;77;112;30;35;0;0;0;0;0;0;0;0;0;
+id=
+type=INS
+file=file:///C:/vkr-temirgaliev/modif_aps/m1/R303-M1-Wb-C0.tif
+server=default
+delay=60
+vip=0
+label=из файла
+
+[Node:3]
+info=0;209;760;30;35;0;0;0;0;0;0;0;0;1;
+id=
+type=OUS
+file=file:///C:/vkr-temirgaliev/modif_aps/m1/kAuto/afid_out/res_afid_rem_C1.tif
+server=default
+delay=60
+vip=0
+label=в файл
+
+[Node:4]
+info=0;204;114;30;35;0;0;0;0;0;0;0;0;0;
+id=
+type=INS
+file=file:///C:/vkr-temirgaliev/modif_aps/m1/R303-M1-Wb-C1.tif
+server=default
+delay=60
+vip=0
+label=из файла

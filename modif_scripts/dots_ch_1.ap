@@ -2,13 +2,13 @@
 
 [Workspace]
 n=1
-nodes=36
+nodes=37
 
 [Node:3]
 info=0;25;2;30;35;0;0;0;0;0;0;0;0;0;
 id=
 type=INS
-file=file:///%D0%9D%D0%98%D0%A0%20%D0%B3%D0%B5%D0%BD%D1%8B%202020/modif_aps/m7/r338-m7_1_smooth_4_out/-sch2-1.tif
+file=file:///vkr-temirgaliev/modif_aps/m1/kAuto/smooth/-sch2-1_or.tif
 server=default
 delay=600
 vip=0
@@ -24,7 +24,7 @@ login=
 password=
 
 [Connections]
-3.1=7.1;11.2;260.1;
+3.1=7.1
 7.1=9.1
 8.1=7.2
 9.1=11.1
@@ -57,6 +57,7 @@ password=
 303.1=246.1;260.2;
 305.1=218.1;221.2;
 306.1=216.1
+307.1=11.2;260.1;
 
 [Node:7]
 info=0;98;63;30;50;0;0;0;0;0;0;0;0;0;
@@ -73,7 +74,7 @@ label=lhbg
 
 [Node:8]
 info=0;190;6;30;35;0;0;0;0;0;0;0;0;0;
-id=-s 23,23,square
+id=-s 19,19,square
 type=PAM
 file=.any
 name=strel
@@ -85,7 +86,7 @@ vip=0
 label=strel
 
 [Node:9]
-info=0;54;119;30;50;0;0;0;0;0;0;0;0;0;
+info=0;82;141;30;50;0;0;0;0;0;0;0;0;0;
 id=-r 1
 type=PAM
 file=.any
@@ -99,7 +100,7 @@ label=median3d
 
 [Node:10]
 info=0;169;116;30;35;0;0;0;0;0;0;0;0;0;
-id=-s 13,13,3,square,square
+id=-s 9,9,3,square,square
 type=PAM
 file=.any
 name=strel3d
@@ -111,7 +112,7 @@ vip=0
 label=strel3d
 
 [Node:11]
-info=0;15;167;30;50;0;0;0;0;0;0;0;0;0;
+info=0;44;209;30;50;0;0;0;0;0;0;0;0;0;
 id=-s -1.0,1.0,0.0
 type=PAM
 file=.any
@@ -137,7 +138,7 @@ vip=0
 label=invert3d
 
 [Node:13]
-info=0;413;162;30;35;0;0;0;0;0;0;0;0;1;
+info=0;413;162;30;35;0;0;0;0;0;0;0;0;0;
 id=-s 5,5,3,square,square
 type=PAM
 file=.any
@@ -413,7 +414,7 @@ label=vstrel
 info=0;344;1560;30;35;0;0;0;0;0;0;0;0;0;
 id=
 type=OUS
-file=file:///%D0%9D%D0%98%D0%A0%20%D0%B3%D0%B5%D0%BD%D1%8B%202020/modif_aps/m7/r338-m7_3_dots_ch_1_4_del_axp_out/-1-mmask.tif
+file=file:///vkr-temirgaliev/modif_aps/m1/kAuto/dots_ch_1/-1-mmask.tif
 server=default
 delay=600
 vip=0
@@ -436,7 +437,7 @@ label=qu3dinit ndhb
 info=0;433;1556;30;35;0;0;0;0;0;0;0;0;0;
 id=
 type=OUS
-file=file:///%D0%9D%D0%98%D0%A0%20%D0%B3%D0%B5%D0%BD%D1%8B%202020/modif_aps/m7/r338-m7_3_dots_ch_1_4_del_axp_out/-1-inimd.txt
+file=file:///vkr-temirgaliev/modif_aps/m1/kAuto/dots_ch_1/-1-inimd.txt
 server=default
 delay=600
 vip=0
@@ -459,7 +460,7 @@ label=qu3d2csv
 info=0;242;1556;30;35;0;0;0;0;0;0;0;0;0;
 id=
 type=OUS
-file=file:///%D0%9D%D0%98%D0%A0%20%D0%B3%D0%B5%D0%BD%D1%8B%202020/modif_aps/m7/r338-m7_3_dots_ch_1_4_del_axp_out/-1-qmd.csv
+file=file:///vkr-temirgaliev/modif_aps/m1/kAuto/dots_ch_1/-1-qmd_m1_kA.csv
 server=default
 delay=600
 vip=0
@@ -492,14 +493,24 @@ vip=0
 label=gopen
 
 [Node:306]
-info=0;45;767;30;35;0;0;0;0;0;0;0;0;0;
-id=-canny 3 3 1 0.03 0.1
+info=0;37;779;30;35;0;0;0;0;0;0;0;0;0;
+id=-canny 3 3 0.5 30 50
 type=PAM
 file=.any
 name=new_canny
 version=7.0.8
 use_metaname=0
 server=default
-delay=60
+delay=600
 vip=0
 label=new_canny
+
+[Node:307]
+info=0;10;96;30;35;0;0;0;0;0;0;0;0;1;
+id=
+type=INS
+file=file:///vkr-temirgaliev/modif_aps/m1/kAuto/smooth/-sch2-1.tif
+server=default
+delay=60
+vip=0
+label=из файла
